@@ -1,4 +1,4 @@
-package org.example.javanetwork.server.nio.udp;
+package org.example.javanetwork.sockets.server.serversocket.udp;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;

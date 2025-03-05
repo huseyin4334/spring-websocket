@@ -1,4 +1,4 @@
-package org.example.javanetwork.server.nio.tcp;
+package org.example.javanetwork.sockets.server.nio.tcp;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

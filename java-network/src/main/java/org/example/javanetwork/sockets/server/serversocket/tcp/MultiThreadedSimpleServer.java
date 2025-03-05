@@ -1,4 +1,4 @@
-package org.example.javanetwork.server.serversocket;
+package org.example.javanetwork.sockets.server.serversocket.tcp;
 
 import java.io.BufferedReader;
 import java.io.IOException;

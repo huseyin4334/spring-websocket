@@ -40,6 +40,13 @@ Also, it will wait for a client to connect to it. (Blocking call)
 
 Server sockets only support TCP connections.
 
+## DatagramSocket (UDP)
+DatagramSocket is used to send and receive data over the UDP protocol.
+It is connection-less protocol. It is faster than TCP, but it is not reliable.
+It is used for broadcasting and multicasting.
+`DatagramPacket` is used to send and receive data over the network.
+`DatagramSocket` is used to send and receive `DatagramPacket`.
+
 # NIO (New IO) Package
 NIO package provides a new way to communicate over the network.
 It provides a non-blocking way to communicate over the network.
@@ -89,14 +96,52 @@ These channels are used with selectors. Selectors are used to select the channel
 Selectable Channels useful for servers that need to handle multiple connections simultaneously.
 It works event-driven architecture. We have to polling in default channel to check the status of the channel.
 
-
-## DatagramSocket (UDP)
-DatagramSocket is used to send and receive data over the UDP protocol.
-It is connection-less protocol. It is faster than TCP, but it is not reliable.
-It is used for broadcasting and multicasting.
-`DatagramPacket` is used to send and receive data over the network.
-`DatagramSocket` is used to send and receive `DatagramPacket`.
-
 # Additional Resources
-- `InetAddress`: This class represents an IP address. It provides methods to get the IP address of any host.
-- `InetSocketAddress`: This class represents a socket address. It has IP address and port number.
+- `InetAddress`: It has IP address and host name only. It uses to get the IP address of the host.
+  - https://learn.microsoft.com/en-us/dotnet/api/java.net.inetaddress?view=net-android-34.0
+- `InetSocketAddress`: Creates a socket address from an IP address and a port number.
+- `SocketAddress`: This represents an ip and port number. This uses to create a socket address.
+
+
+# Java High Level Networking APIs
+Java high-level networking APIs are used to communicate over the network with high-level abstractions.
+These APIs are built on top of low-level networking APIs.
+
+These types abstract networking concepts even further, starting with URLs and URIs, which represent resources on the internet.
+
+- `URI`: It represents a **Uniform Resource Identifier**. It is used to identify a resource on the internet.
+  - `URL` and `URN` are the subsets of URI.
+  - URI defines the syntax for identifying resources. This can be a URL or URN.
+- `URL`: It represents a **Uniform Resource Locator**. It is used to locate a resource on the internet.
+  - It is a subtype of URI.
+  - It has a protocol, host, port, path, query, and fragment.
+  - `http://www.example.com:8080/index.html?name=java#section1`
+  - `scheme://host:port/path?query#fragment`
+- `URN`: It represents a **Uniform Resource Name**. It is used to name a resource on the internet.
+  - It is a subtype of URI.
+  - It is used to identify a resource by name in a particular namespace.
+  - `urn:isbn:0451450523`
+  - `scheme:namespace:identifier`
+
+- `Relative URI`: It is a URI that doesn't contain the scheme and host. It is used to locate a resource relative to the current resource.
+  - `../images/logo.png`
+  - When we call `toURL()` method on a relative URI, it will give an `IllegalArgumentException`. Because URL don't have relative URI.
+- `Absolute URI`: It is a URI that contains the scheme and host. It is used to locate a resource from the root.
+  - `http://www.example.com/images/logo.png`
+
+```java
+import java.net.URI;
+
+class Test {
+  public static void main(String[] args) {
+    URI uri = URI.create("http://www.example.com:8080");
+    URI relativeUri = URI.create("/images/logo.png");
+    
+    URI absoluteUri = uri.resolve(relativeUri);
+  }
+}
+```
+
+- `URLConnection`: It is used to connect to a resource on the internet. It is an abstract class.
+  - `HttpURLConnection`: It is used to connect to an HTTP resource on the internet.
+  - `JarURLConnection`: It is used to connect to a JAR resource on the internet.

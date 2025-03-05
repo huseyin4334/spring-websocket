@@ -1,4 +1,4 @@
-package org.example.javanetwork.client;
+package org.example.javanetwork.sockets.client;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

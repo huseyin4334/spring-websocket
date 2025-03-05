@@ -1,4 +1,4 @@
-package org.example.javanetwork.client;
+package org.example.javanetwork.sockets.client;
 
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioSystem;
