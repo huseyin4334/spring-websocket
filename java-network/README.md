@@ -142,6 +142,13 @@ class Test {
 }
 ```
 
-- `URLConnection`: It is used to connect to a resource on the internet. It is an abstract class.
+## HttpURLConnection vs HttpClient
+- `URLConnection`: It is used to connect to a resource on the internet. It is an abstract class. It uses for client-side networking.
   - `HttpURLConnection`: It is used to connect to an HTTP resource on the internet.
   - `JarURLConnection`: It is used to connect to a JAR resource on the internet.
+
+- `HttpClient`: It is used to connect to a resource on the internet. It is a class. It uses for client-side networking.
+
+But the main difference between `URLConnection` and `HttpClient` is that `HttpClient` is more flexible, non-blocking, and supports HTTP/2.
+
+```java

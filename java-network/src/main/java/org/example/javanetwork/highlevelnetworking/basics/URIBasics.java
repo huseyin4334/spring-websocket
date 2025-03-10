@@ -1,4 +1,4 @@
-package org.example.javanetwork.highlevelnetworking;
+package org.example.javanetwork.highlevelnetworking.basics;
 
 import java.net.MalformedURLException;
 import java.net.URI;

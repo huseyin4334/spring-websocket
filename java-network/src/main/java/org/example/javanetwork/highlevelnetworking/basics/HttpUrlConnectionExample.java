@@ -1,11 +1,10 @@
-package org.example.javanetwork.highlevelnetworking;
+package org.example.javanetwork.highlevelnetworking.basics;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 
 public class HttpUrlConnectionExample {
     public static void main(String[] args) {
