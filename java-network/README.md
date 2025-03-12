@@ -151,4 +151,4 @@ class Test {
 
 But the main difference between `URLConnection` and `HttpClient` is that `HttpClient` is more flexible, non-blocking, and supports HTTP/2.
 
-```java
+We can async calls with `HttpClient`. It is more efficient than `URLConnection`. (Java 11+) (`CompletableFuture`)
