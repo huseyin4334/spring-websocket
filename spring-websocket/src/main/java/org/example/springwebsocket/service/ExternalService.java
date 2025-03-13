@@ -1,7 +1,8 @@
 package org.example.springwebsocket.service;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
+
 import org.example.springwebsocket.model.pojo.PaymentTerm;
 import org.example.springwebsocket.model.request.PaymentRequest;
 import org.example.springwebsocket.model.response.PaymentResponse;
@@ -13,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Slf4j
+@Log4j2
 @RequiredArgsConstructor
 @Service
 public class ExternalService {

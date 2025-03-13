@@ -1,17 +1,14 @@
 package org.example.springwebsocket.controller;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.kafka.clients.producer.ProducerRecord;
+import lombok.extern.log4j.Log4j2;
 import org.example.springwebsocket.model.response.PaymentResponse;
 import org.example.springwebsocket.utils.KafkaConstants;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Objects;
-import java.util.UUID;
 
-@Slf4j
+@Log4j2
 @RequiredArgsConstructor
 @RequestMapping("/external/payment")
 @RestController

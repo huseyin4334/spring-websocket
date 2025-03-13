@@ -14,7 +14,8 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 
 @ConditionalOnProperty(
         value = "websocket.enabled",
-        havingValue = "true"
+        havingValue = "true",
+        matchIfMissing = false
 )
 @EnableWebSocket
 @Configuration

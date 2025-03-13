@@ -1,7 +1,8 @@
 package org.example.springwebsocket.controller;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+
+import lombok.extern.log4j.Log4j2;
 import org.example.springwebsocket.model.request.PaymentRequest;
 import org.example.springwebsocket.service.PaymentService;
 import org.example.springwebsocket.utils.StompConstants;
@@ -10,7 +11,7 @@ import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Controller;
 
 @RequiredArgsConstructor
-@Slf4j
+@Log4j2
 @Controller
 public class WebSocketController {
 

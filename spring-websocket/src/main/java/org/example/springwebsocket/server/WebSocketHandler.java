@@ -2,9 +2,8 @@ package org.example.springwebsocket.server;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.example.springwebsocket.service.ExternalService;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -16,7 +15,7 @@ import java.util.stream.IntStream;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
+@Log4j2
 public class WebSocketHandler extends TextWebSocketHandler {
 
     private final ExternalService externalService;

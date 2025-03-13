@@ -1,7 +1,8 @@
 package org.example.springwebsocket.service;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+
+import lombok.extern.log4j.Log4j2;
 import org.example.springwebsocket.model.request.PaymentRequest;
 import org.example.springwebsocket.model.response.PaymentResponse;
 import org.example.springwebsocket.repository.PaymentRepository;
@@ -15,7 +16,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-@Slf4j
+@Log4j2
 @RequiredArgsConstructor
 @Service
 public class PaymentService {
